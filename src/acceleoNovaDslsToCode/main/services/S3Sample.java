@@ -60,7 +60,7 @@ public class S3Sample {
         AWSCredentials credentials = null;
         try {
             //credentials = new ProfileCredentialsProvider().getCredentials();
-        	credentials=new  BasicAWSCredentials("AKIAJLOEKAJ2HOE5QLSQ","ZDuekBhQuhW+Yfkgxfm230ZolOIeGqvp3lqJJIlS");
+        	credentials=new  BasicAWSCredentials("provide credentials","provide hash"); // for security reason we are not providing these credentials
         } catch (Exception e) {
             throw new AmazonClientException(
                     "Cannot load the credentials from the credential profiles file. " +
@@ -213,7 +213,7 @@ public class S3Sample {
      */
     private static void displayTextInputStream(InputStream input) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(input));
-        PrintWriter pw=new PrintWriter(new FileWriter("E:\\an\\out.txt"));
+        PrintWriter pw=new PrintWriter(new FileWriter("..\\acceleoNovaDslsToCode\\dest1\\out.txt"));
         while (true) {
             String line = reader.readLine();
             if (line == null) break;
