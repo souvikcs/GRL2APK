@@ -11,23 +11,11 @@ public class SettingAndroidApp
 		try
 		{
 			
-			//String cpy="xcopy /E /A E:\\an\\RHCS E:\\an\\dest";
-			String cpy="xcopy /E /A E:\\AndroidDev\\RHCS E:\\an\\dest";
+			
+			String cpy="xcopy /E /A ..\\acceleoNovaDslsToCode\\AndroidDev\\RHCS ..\\acceleoNovaDslsToCode\\an\\dest";
 			Process p=Runtime.getRuntime().exec("cmd /c "+cpy);
 			Thread.sleep(10000);
-			//Process p=Runtime.getRuntime().exec("cmd /c \"start cd souvikdir && mkdir newdir\"");
-			//Runtime.getRuntime().exec("cmd /c cd test2 && mkdir test4");
-			//p=Runtime.getRuntime().exec("cmd /c cd mkdir newdir");
-			//new Thread(new SyncPipe(p.getErrorStream(),System.err)).start();
-			//new Thread(new SyncPipe(p.getInputStream(),System.out)).start();
-			//File source=new File("E:\\workzone\\JavaPrograms\\GenerateAndroidApp\\gradle\\wrapper\\gradle-wrapper.properties");
-			//File dest=new File("E:\\workzone\\JavaPrograms\\SkypeTest\\gradle\\wrapper\\gradle-wrapper.properties");
-			//Files.copy(source.toPath(), dest.toPath());
-			//FileUtils.copyFile(source, dest);
-			//Runtime.getRuntime().exec("cmd /c copy /y E:\\workzone\\JavaPrograms\\GenerateAndroidApp\\gradle\\wrapper\\gradle-wrapper.properties E:\\workzone\\JavaPrograms\\SkypeDemo\\gradle\\wrapper");
-			//Runtime.getRuntime().exec("cmd /c copy /y E:\\workzone\\JavaPrograms\\GenerateAndroidApp\\build.gradle E:\\workzone\\JavaPrograms\\SkypeDemo");
-			//Runtime.getRuntime().exec("cmd /c cd E:\\an\\dest1 && gradlew assembleDebug");
-			//Thread.sleep(10000);
+			
 			String l="";
 			i=0;
 			goals=new String[50];
@@ -48,19 +36,19 @@ public class SettingAndroidApp
 		}
 		catch(Exception e)
 		{
-			System.out.println("Here I am");
+			e.printStackTrace();
 		}
 		try
 		{
 			for(int j=0;j<i;j++)
 			{
-				Runtime.getRuntime().exec("cmd /c copy /y E:\\workzone\\JavaPrograms\\GenerateAndroidApp\\gradle\\wrapper\\gradle-wrapper.properties E:\\workzone\\JavaPrograms\\SkypeDemo1\\dest1\\gradle\\wrapper");
-				Runtime.getRuntime().exec("cmd /c copy /y E:\\workzone\\JavaPrograms\\GenerateAndroidApp\\build.gradle E:\\workzone\\JavaPrograms\\SkypeDemo1\\dest1");
+				Runtime.getRuntime().exec("cmd /c copy /y ..\\acceleoNovaDslsToCode\\GenerateAndroidApp\\gradle\\wrapper\\gradle-wrapper.properties ..\\acceleoNovaDslsToCode\\dest1\\gradle\\wrapper");
+				Runtime.getRuntime().exec("cmd /c copy /y ..\\acceleoNovaDslsToCode\\GenerateAndroidApp\\build.gradle ..\\acceleoNovaDslsToCode\\dest1");
 			}
 		}
 		catch(Exception e)
 		{
-			
+			e.printStackTrace();
 		}
 	}
 }
