@@ -60,7 +60,7 @@ public class S3Sample {
         AWSCredentials credentials = null;
         try {
             //credentials = new ProfileCredentialsProvider().getCredentials();
-        	credentials=new  BasicAWSCredentials("provide credentials","provide hash"); // for security reason we are not providing these credentials
+        	credentials=new  BasicAWSCredentials("provide Access Key","provide secret access key"); // for security reason we are not providing these credentials
         } catch (Exception e) {
             throw new AmazonClientException(
                     "Cannot load the credentials from the credential profiles file. " +
