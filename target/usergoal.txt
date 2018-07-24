@@ -1,0 +1,33 @@
+				Actor: Patient
+					Registration
+		
+					Login
+		
+					ProvideMedicalDetails
+		
+				
+				Actor: Doctor
+					Registration
+		
+					Login
+		
+					AccessMedicalHistory
+		
+				
+
+				Actor: Patient
+					Registration
+		
+					Login
+		
+					ProvideMedicalDetails
+		
+				
+				Actor: Doctor
+					Registration
+		
+					Login
+		
+					AccessMedicalHistory
+		
+				

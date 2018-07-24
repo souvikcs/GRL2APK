@@ -1,0 +1,34 @@
+            
+
+						SoftGoal: Authentication
+						SoftGoal_Decomposition: or
+
+							Decomposition: LoginWithGmail
+
+							Decomposition: LoginAsNormal
+						
+	
+						Op_SGoal: LoginWithGmail
+						Op_SGoal_Decomposition: and
+						
+						Op_SGoal: LoginAsNormal
+						Op_SGoal_Decomposition: and
+						
+						SoftGoal: Security
+						SoftGoal_Decomposition: or
+
+							Decomposition: AES Encryption 
+
+							Decomposition: DES Encryption
+							Decomposition: No Encryption
+	
+						Op_SGoal: AES Encryption 
+						Op_SGoal_Decomposition: and
+						
+						Op_SGoal: DES Encryption
+						Op_SGoal_Decomposition: and
+						
+						Op_SGoal: No Encryption
+						Op_SGoal_Decomposition: and
+						
+

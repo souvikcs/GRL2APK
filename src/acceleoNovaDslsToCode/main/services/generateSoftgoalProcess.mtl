@@ -1,0 +1,14 @@
+[comment encoding = Cp1252 /]
+[**
+ * The documentation of the module.
+ */]
+[module generateSoftgoalProcess('http://www.xtext.org/example/novadsl/NovaDsl')/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public processSoftGoal(arg0 : String) : OclVoid
+	= invoke('acceleoNovaDslsToCode.main.services.SoftGoalProcess', 'processSoftGoal(java.lang.String)', Sequence{arg0})
+/]
+

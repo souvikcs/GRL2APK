@@ -1,0 +1,15 @@
+nfrl catalog{
+	nfr_SGoal Authentication{
+		decompositionType=or;
+		decomposedBy LoginWithGmail, LoginAsNormal;
+	}
+	op_SGoal LoginWithGmail;
+	op_SGoal LoginAsNormal;
+	nfr_SGoal Security{
+		decompositionType=or;
+		decomposedBy AES Encryption, DES Encryption, No Encryption;
+	}
+	op_SGoal AES Encryption;
+	op_SGoal DES Encryption;
+	op_SGoal No Encryption;
+}

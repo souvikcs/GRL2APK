@@ -1,0 +1,7 @@
+[comment encoding = Cp1252 /]
+[module genAPK('http://www.xtext.org/example/novadsl/NovaDsl')/]
+
+[query public genAPP(anOclAny: OclAny) : OclVoid
+	= invoke('acceleoNovaDslsToCode.main.services.GenerateAPK', 'genAPP()', Sequence{})
+/]
+

@@ -1,0 +1,89 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.xtext.org/example/novadsl/NovaDsl')]
+[import acceleoNovaDslsToCode::main::services::proces]
+[import acceleoNovaDslsToCode::main::services::FileExistCheck]
+[import acceleoNovaDslsToCode::main::services::generateSoftgoalProcess]
+[import acceleoNovaDslsToCode::main::services::genSettingApp]
+[import acceleoNovaDslsToCode::main::services::genAPK]
+[import acceleoNovaDslsToCode::main::services::generatedownloadnfr]
+[template public generateElement(m : Model)]
+[comment @main/]
+
+
+[if  existsFile('../acceleoNovaDslsToCode/target/softgoal.txt')]
+        [file ('nfrsoftgoal.txt', false, 'UTF-8')]
+            
+
+			[for (sg:NFR_SGoal | m.eAllContents(NFR_SGoal))]
+						SoftGoal: [sg.name/]
+						SoftGoal_Decomposition: [sg.decompositionType/]
+				[for(d:InLineNFRDecomposition | sg.eAllContents(InLineNFRDecomposition))]
+						[for(p:NFRDecompositionEnd | d.eAllContents(NFRDecompositionEnd))]
+
+							Decomposition: [p.destName.name/]
+						[/for]
+						
+					[/for]
+			[/for]
+	
+			[for (opsg:Op_SGoal | m.eAllContents(Op_SGoal))]
+						Op_SGoal: [opsg.name/]
+						Op_SGoal_Decomposition: [opsg.decompositionType/]
+					[for(d:InLineNFRDecomposition | opsg.eAllContents(InLineNFRDecomposition))]
+						[for(p:NFRDecompositionEnd | d.eAllContents(NFRDecompositionEnd))]
+
+							Decomposition: [p.destName.name/]
+						[/for]
+						
+					[/for]
+						
+			[/for]
+
+        [/file]
+
+		
+[else]
+		[file ('usergoal.txt', true, 'UTF-8')]
+			[for(a:Actor | m.eAllContents(Actor))]
+				Actor: [a.name/]
+				[for(g:Goal | a.eAllContents(Goal))]
+					[g.name/]
+		
+				[/for]
+				
+			[/for]
+		[/file]
+
+		[file ('userdependency.txt', false, 'UTF-8')]
+			[for(a:Actor | m.eAllContents(Actor))]
+					Actor: [a.name/]
+				[for(g:Goal | a.eAllContents(Goal))]
+			
+					[for(e:InLineDependency | g.eAllContents(InLineDependency))]
+				
+						[for(p:DependencyEnd | e.eAllContents(DependencyEnd))]
+								[g.name/] dependson [p.destName.name/]
+						[/for]
+					[/for]
+				[/for]
+			[/for]
+		[/file]
+
+		[file ('softgoal.txt', false, 'UTF-8')]
+			[for(a1:Actor | m.eAllContents(Actor))]
+				Actor: [a1.name/]
+				[for(sg:Softgoal | a1.eAllContents(Softgoal))]
+					[sg.name/]
+				[/for]
+			[/for]
+		[/file]
+[/if]
+
+
+[comment [setApp()/]
+
+[comment [downloadNfr()/]
+
+
+
+[/template]

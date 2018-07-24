@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module main2('http://www.xtext.org/example/novadsl/NovaDsl')/]
+[import acceleoNovaDslsToCode::main::generate/]
+[import acceleoNovaDslsToCode::main::services::genAPK]
+
+[template public main2Model(aModel : Model)]
+	
+	[comment @main /]
+	
+	[genAPP()/]
+[/template]

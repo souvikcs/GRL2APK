@@ -1,0 +1,41 @@
+[comment encoding = Cp1252 /]
+[**
+ * The documentation of the module.
+ */]
+[module proces('http://www.xtext.org/example/novadsl/NovaDsl')/]
+
+[**
+ * The documentation of the query
+ */]
+[query public processFile(anOclAny: OclAny) : OclVoid
+	= invoke('acceleoNovaDslsToCode.main.services.ParseFile', 'processFile()', Sequence{})
+/]
+
+[**
+ * The documentation of the query
+ */]
+[query public EnterSentence(anOclAny: OclAny) : OclVoid
+	= invoke('acceleoNovaDslsToCode.main.services.ParseFile', 'EnterSentence()', Sequence{})
+/]
+
+[**
+ * The documentation of the query
+ */]
+[query public PrintSentence(anOclAny: OclAny) : OclVoid
+	= invoke('acceleoNovaDslsToCode.main.services.ParseFile', 'PrintSentence()', Sequence{})
+/]
+
+[**
+ * The documentation of the query
+ */]
+[query public ChooseDisplay(anOclAny: OclAny) : OclVoid
+	= invoke('acceleoNovaDslsToCode.main.services.ParseFile', 'ChooseDisplay()', Sequence{})
+/]
+
+[**
+ * The documentation of the query
+ */]
+[query public CalculateLength(anOclAny: OclAny) : OclVoid
+	= invoke('acceleoNovaDslsToCode.main.services.ParseFile', 'CalculateLength()', Sequence{})
+/]
+

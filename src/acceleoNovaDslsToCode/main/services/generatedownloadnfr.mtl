@@ -1,0 +1,7 @@
+[comment encoding = Cp1252 /]
+[module generatedownloadnfr('http://www.xtext.org/example/novadsl/NovaDsl')/]
+
+[query public downloadNfr(anOclAny: OclAny) : OclVoid
+	= invoke('acceleoNovaDslsToCode.main.services.S3Sample', 'downloadNfr()', Sequence{})
+/]
+

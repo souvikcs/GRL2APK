@@ -1,0 +1,5 @@
+				Actor: Patient
+					Authentication
+					Security
+				Actor: Doctor
+					Authentication

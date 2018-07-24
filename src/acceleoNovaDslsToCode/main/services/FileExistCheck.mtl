@@ -1,0 +1,14 @@
+[comment encoding = Cp1252 /]
+[**
+ * The documentation of the module.
+ */]
+[module FileExistCheck('http://www.xtext.org/example/novadsl/NovaDsl')/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public existsFile(arg0 : String) : Boolean
+	= invoke('acceleoNovaDslsToCode.main.services.FileExistOrNot', 'existsFile(java.lang.String)', Sequence{arg0})
+/]
+

@@ -1,0 +1,12 @@
+					Actor: Patient
+			
+			
+				
+								Login dependson Registration
+			
+					Actor: Doctor
+			
+			
+				
+								Login dependson Registration
+			

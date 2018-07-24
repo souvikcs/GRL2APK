@@ -1,0 +1,7 @@
+[comment encoding = Cp1252 /]
+[module genSettingApp('http://www.xtext.org/example/novadsl/NovaDsl')/]
+
+[query public setApp(anOclAny: OclAny) : OclVoid
+	= invoke('acceleoNovaDslsToCode.main.services.SettingAndroidApp', 'setApp()', Sequence{})
+/]
+
