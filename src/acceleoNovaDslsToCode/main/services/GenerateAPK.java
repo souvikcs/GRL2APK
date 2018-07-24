@@ -7,9 +7,9 @@ public class GenerateAPK
 	{
 		try 
 		{
-			Runtime.getRuntime().exec("cmd /c cd ..\\an\\dest && gradlew assembleDebug");
+			Runtime.getRuntime().exec("cmd /c cd ..\\acceleoNovaDslsToCode\\dest && gradlew assembleDebug");
 			Thread.sleep(1000);
-			Runtime.getRuntime().exec("cmd /c cd ..\\an\\dest && gradlew assembleRelease");
+			Runtime.getRuntime().exec("cmd /c cd ..\\acceleoNovaDslsToCode\\dest && gradlew assembleRelease");
 		}
 		catch(Exception e)
 		{
